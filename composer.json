@@ -1,0 +1,38 @@
+{
+    "name": "amunyua/datatable",
+    "description": "This is a laravel 4 package for the server and client side of datatablaes at http://datatables.net/",
+    "keywords" : ["laravel","datatables", "ajax", "jquery"],
+    "license": "MIT",
+    "homepage": "http://github.com/Chumper/datatable",
+    "authors": [
+        {
+            "name": "Nils Plaschke",
+            "email": "github@nilsplaschke.de",
+            "homepage": "http://nilsplaschke.de",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/config": "^7.30",
+        "illuminate/support": "^7.30",
+        "illuminate/view": "^7.30"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.5.8|^9.3.3",
+        "mockery/mockery": "^1.3.1",
+        "orchestra/testbench": "^5.16"
+    },
+    "autoload": {
+        "psr-0": {
+            "Chumper\\Datatable": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git://github.com/orchestral/phpseclib.git"
+        }
+    ]
+}
