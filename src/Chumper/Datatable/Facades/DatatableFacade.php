@@ -1,5 +1,6 @@
 <?php namespace Chumper\Datatable\Facades;
 
+use Chumper\Datatable\Datatable;
 use Illuminate\Support\Facades\Facade;
 
 class DatatableFacade extends Facade {
@@ -9,6 +10,6 @@ class DatatableFacade extends Facade {
      *
      * @return string
      */
-    protected static function getFacadeAccessor() { return 'datatable'; }
+    protected static function getFacadeAccessor() { return Datatable::class; }
 
 }

@@ -1,6 +1,7 @@
 <?php namespace Chumper\Datatable;
 
 use Exception;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Config;
@@ -80,7 +81,8 @@ class Table {
 
     function __construct()
     {
-        $this->config = Config::get('datatable::table');
+        $this->config = Config::get('chumper.datatable.table');
+//        Log::info($this->config);
 
         $this->setId( $this->config['id'] );
         $this->setClass( $this->config['class'] );

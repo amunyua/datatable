@@ -6,7 +6,7 @@ use Chumper\Datatable\Columns\DateColumn;
 use Chumper\Datatable\Columns\FunctionColumn;
 use Chumper\Datatable\Columns\TextColumn;
 use Illuminate\Support\Collection;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Request as Input;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Config;
 
@@ -115,8 +115,8 @@ abstract class BaseEngine {
     function __construct()
     {
         $this->columns = new Collection();
-        $this->config = Config::get('datatable::engine');
-        $this->setExactWordSearch( $this->config['exactWordSearch'] );
+        $this->config = Config::get('chumper.datatable.table');
+        $this->setExactWordSearch( false);
         return $this;
     }
 
